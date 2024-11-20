@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Sunset Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sunrise Sunset Dashboard</h1>
+    </header>
+    <main>
+        <section id="location-selection">
+            <select id="location-select">
+                <option value="">Select a location</option>
+                <option value="41.8781,-87.6298">Chicago</option>
+                <option value="40.7128,-74.0060">New York</option>
+                <option value="34.0522,-118.2437">Los Angeles</option>
+                <option value="51.5074,-0.1278">London</option>
+                <option value="48.8566,2.3522">Paris</option>
+                <option value="35.6762,139.6503">Tokyo</option>
+                <option value="-33.8688,151.2093">Sydney</option>
+                <option value="-22.9068,-43.1729">Rio de Janeiro</option>
+                <option value="55.7558,37.6173">Moscow</option>
+                <option value="1.3521,103.8198">Singapore</option>
+            </select>
+            <button id="use-current-location">Use Current Location</button>
+        </section>
+        <section id="results">
+            <div class="day-container" id="today">
+                <h2>Today</h2>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunset-up.svg" alt="Sunrise icon" class="icon">
+                        <p>Sunrise: <span id="today-sunrise">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunset-down.svg" alt="Sunset icon" class="icon">
+                        <p>Sunset: <span id="today-sunset">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunny.svg" alt="Dawn icon" class="icon">
+                        <p>Dawn: <span id="today-dawn">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-night.svg" alt="Dusk icon" class="icon">
+                        <p>Dusk: <span id="today-dusk">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:clock-outline.svg" alt="Day length icon" class="icon">
+                        <p>Day Length: <span id="today-day-length">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:sun-clock.svg" alt="Solar noon icon" class="icon">
+                        <p>Solar Noon: <span id="today-solar-noon">--:--</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="day-container" id="tomorrow">
+                <h2>Tomorrow</h2>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunset-up.svg" alt="Sunrise icon" class="icon">
+                        <p>Sunrise: <span id="tomorrow-sunrise">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunset-down.svg" alt="Sunset icon" class="icon">
+                        <p>Sunset: <span id="tomorrow-sunset">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-sunny.svg" alt="Dawn icon" class="icon">
+                        <p>Dawn: <span id="tomorrow-dawn">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:weather-night.svg" alt="Dusk icon" class="icon">
+                        <p>Dusk: <span id="tomorrow-dusk">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:clock-outline.svg" alt="Day length icon" class="icon">
+                        <p>Day Length: <span id="tomorrow-day-length">--:--</span></p>
+                    </div>
+                    <div class="data-item">
+                        <img src="https://api.iconify.design/mdi:sun-clock.svg" alt="Solar noon icon" class="icon">
+                        <p>Solar Noon: <span id="tomorrow-solar-noon">--:--</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p id="timezone">Time Zone: <span id="timezone-value">--</span></p>
+        <p id="error-message" class="hidden">An error occurred. Please try again.</p>
+    </main>
+    <footer>
+        <p>Powered by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
+    </footer>
+</body>
+</html>
